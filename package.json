@@ -2,7 +2,7 @@
 	"name": "columnpaste",
 	"displayName": "Column Paste",
 	"description": "",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "johnguo",
 	"engines": {
 		"vscode": "^1.40.0"

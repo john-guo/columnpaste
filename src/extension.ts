@@ -38,10 +38,10 @@ export function activate(context: vscode.ExtensionContext) {
 				{
 					sel = selection[index].start;
 				}
-				if (sel.line < e.document.lineCount) {
+				if (sel.line < e.document.lineCount - 1) {
 					element = element.trimRight();
 				}
-				e.insertSnippet(new vscode.SnippetString(element), sel);
+				e.insertSnippet(new vscode.SnippetString(element), sel, {undoStopAfter:false, undoStopBefore:false});
 			});
 		});
 	});
