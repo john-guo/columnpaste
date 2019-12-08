@@ -16,6 +16,9 @@ ctrl+alt+v "column paste"
 
 Select multiline content and press ctrl+c to copy, then select one line or multiline with column mode and press ctrl+alt+v to paste.
 
+### 0.0.2
+change readme
+
 ### 0.0.1
 
 Initial release of columnpaste
