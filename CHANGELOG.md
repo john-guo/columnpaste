@@ -1,5 +1,5 @@
 # Change Log
-## [0.0.5]
+## [0.0.6]
 ### Added
 - Add a new paste command "Column Paste Auto Filled", shortcut key is shift+ctrl+v, this will help column vertial alignment after pasting. Thanks to [icetbr](https://github.com/icetbr) 
 
