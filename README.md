@@ -17,7 +17,7 @@ ctrl+alt+v "column paste"
 Select multiline content and press ctrl+c to copy, then select one line or multiline with column mode and press ctrl+alt+v to paste.
 
 ### 0.0.5
-add a new paste command(ctrl+shfit+v) for vertial alignment. Thanks for [icetbr](https://github.com/icetbr) 
+add a new paste command(ctrl+shfit+v) for vertial alignment. Thanks to [icetbr](https://github.com/icetbr) 
 
 ### 0.0.4
 add a description
