@@ -2,10 +2,11 @@
 	"name": "columnpaste",
 	"displayName": "Column Paste",
 	"description": "Copy/Paste a column text",
-	"version": "0.0.4",
+	"version": "0.0.5",
+	"license": "MIT",
 	"publisher": "johnguo",
 	"engines": {
-		"vscode": "^1.40.0"
+		"vscode": "^1.44.0"
 	},
 	"repository": {
 		"type": "git",
@@ -15,7 +16,8 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.columnpaste"
+		"onCommand:extension.columnpaste",
+		"onCommand:extension.columnpasteautofilled"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -23,12 +25,20 @@
 			{
 				"command": "extension.columnpaste",
 				"title": "Column Paste"
+			},
+			{
+				"command": "extension.columnpasteautofilled",
+				"title": "Column Paste Auto Filled"
 			}
 		],
 		"keybindings": [
 			{
 				"command": "extension.columnpaste",
 				"key": "ctrl+alt+v"
+			},
+			{
+				"command": "extension.columnpasteautofilled",
+				"key": "shift+ctrl+v"
 			}
 		]
 	},
@@ -45,9 +55,8 @@
 		"@types/node": "^12.12.37",
 		"@types/vscode": "^1.44.0",
 		"glob": "^7.1.5",
-		"mocha": "^6.2.3",
-		"tslint": "^5.20.0",
-		"typescript": "^3.8.3",
+		"mocha": "^9.1.3",
 		"vscode-test": "^1.3.0"
-	}
+	},
+	"dependencies": {}
 }

@@ -37,15 +37,72 @@ export function activate(context: vscode.ExtensionContext) {
 				{
 					sel = selection[index].start;
 				}
-				if (sel.line < e.document.lineCount - 1) {
+				if (sel.line < e.document.lineCount - 1) 
+				{
 					element = element.trimRight();
-				}
+				} 
 				e.insertSnippet(new vscode.SnippetString(element), sel, {undoStopAfter:false, undoStopBefore:false});
 			});
 		});
 	});
 
 	context.subscriptions.push(disposable);
+
+	let disposable2 = vscode.commands.registerCommand('extension.columnpasteautofilled', () => {
+		// The code you place here will be executed every time your command is executed
+		let editor = vscode.window.activeTextEditor;
+		if (editor === undefined)
+		{
+			return;
+		}
+
+		let e = editor as vscode.TextEditor;
+		let selection = e.selections;
+		
+		vscode.env.clipboard.readText().then(str => {
+			let lines = str.match(/^.*((\r\n|\n|\r)|$)/gm);
+			if (lines === null) {
+				return;
+			}
+
+			lines.forEach((element, index) => {
+				let sel = selection[0].start;
+				let col = sel.character;
+				if (index>=selection.length)
+				{
+					sel = selection[selection.length-1].start;
+					sel = new vscode.Position(sel.line + index - selection.length + 1, col);
+				}
+				else 
+				{
+					sel = selection[index].start;
+				}
+
+				let lineEnd = 0;
+				if (sel.line < e.document.lineCount) 
+				{
+					if (sel.line < e.document.lineCount - 1)
+					{
+						element = element.trimRight();
+					}
+					lineEnd = e.document.lineAt(sel.line).range.end.character;
+				}
+				else
+				{
+					sel = new vscode.Position(sel.line, 0);
+				}
+
+				if (index > 0)
+				{
+					element = " ".repeat(Math.max(0, col - lineEnd)) + element;
+				}
+
+				e.insertSnippet(new vscode.SnippetString(element), sel, {undoStopAfter:false, undoStopBefore:false});
+			});
+		});
+	});
+
+	context.subscriptions.push(disposable2);
 }
 
 // this method is called when your extension is deactivated
