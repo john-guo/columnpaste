@@ -40,7 +40,8 @@ export function activate(context: vscode.ExtensionContext) {
 				if (sel.line < e.document.lineCount - 1) 
 				{
 					element = element.trimRight();
-				} 
+				}
+				element = element.replace(/\$/g, "\\$");
 				e.insertSnippet(new vscode.SnippetString(element), sel, {undoStopAfter:false, undoStopBefore:false});
 			});
 		});
@@ -97,6 +98,7 @@ export function activate(context: vscode.ExtensionContext) {
 					element = " ".repeat(Math.max(0, col - lineEnd)) + element;
 				}
 
+				element = element.replace(/\$/g, "\\$");
 				e.insertSnippet(new vscode.SnippetString(element), sel, {undoStopAfter:false, undoStopBefore:false});
 			});
 		});
