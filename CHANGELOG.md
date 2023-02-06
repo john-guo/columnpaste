@@ -1,4 +1,8 @@
 # Change Log
+## [0.0.8]
+### Fixed
+- Fix an issue in new version 1.75.0 as the vscode team add a guard for insertSnippet
+
 ## [0.0.7]
 ### Fixed
 - Fix an issue that if a text contains '$' that the vscode will treat it as a variable then it cannot be paste successfully

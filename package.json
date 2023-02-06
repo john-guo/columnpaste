@@ -2,7 +2,7 @@
 	"name": "columnpaste",
 	"displayName": "Column Paste",
 	"description": "Copy/Paste a column text",
-	"version": "0.0.7",
+	"version": "0.0.8",
 	"license": "MIT",
 	"publisher": "johnguo",
 	"engines": {
