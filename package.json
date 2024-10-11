@@ -2,7 +2,7 @@
 	"name": "columnpaste",
 	"displayName": "Column Paste",
 	"description": "Copy/Paste a column text",
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"license": "MIT",
 	"publisher": "johnguo",
 	"engines": {
@@ -15,10 +15,7 @@
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [
-		"onCommand:extension.columnpaste",
-		"onCommand:extension.columnpasteautofilled"
-	],
+	"activationEvents" : [],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [

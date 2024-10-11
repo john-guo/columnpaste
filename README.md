@@ -16,6 +16,9 @@ ctrl+alt+v "column paste"
 
 Select multiline content and press ctrl+c to copy, then select one line or multiline with column mode and press ctrl+alt+v to paste.
 
+### 0.0.9
+add multiline repete copy/paste feature. Notice when copying multiple selected lines, they will be copied sequentially in order until all selected lines are processed. The process will stop once all the selected lines are processed. If the number of selected lines is fewer than the number of lines to be copied, the result will not copy all the lines. [details](https://github.com/john-guo/columnpaste/issues/12). Thanks to [aith85](https://github.com/aith85).
+
 ### 0.0.8
 fix an issue in new version 1.75.0 as the vscode team add a guard for insertSnippet([this issue](https://github.com/john-guo/columnpaste/issues/9)). Thanks to [Scorg](https://github.com/Scorg).
 

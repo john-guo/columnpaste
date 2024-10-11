@@ -1,4 +1,8 @@
 # Change Log
+## [0.0.9]
+### Added
+- Add multiline repete copy/paste feature. [details](https://github.com/john-guo/columnpaste/issues/12). Thanks to [aith85](https://github.com/aith85)
+
 ## [0.0.8]
 ### Fixed
 - Fix an issue in new version 1.75.0 as the vscode team add a guard for insertSnippet
