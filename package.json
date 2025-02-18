@@ -52,7 +52,7 @@
 		"@types/node": "^12.12.37",
 		"@types/vscode": "^1.44.0",
 		"glob": "^7.1.5",
-		"mocha": "^9.1.3",
+		"mocha": "^11.1.0",
 		"vscode-test": "^1.3.0"
 	},
 	"dependencies": {}
